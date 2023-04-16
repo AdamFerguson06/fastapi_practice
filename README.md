@@ -44,3 +44,14 @@ Access the interactive documentation at http://localhost:8000/docs
 ### MIT License
 
 This project is licensed under the terms of the MIT license. See the LICENSE file for details.
+
+## Acknowledgements
+
+This project was built using the following technologies:
+
+- [FastAPI](https://fastapi.tiangolo.com/) - The web framework used
+- [Transformers](https://huggingface.co/transformers/) - The NLP library for sentiment analysis
+- [Uvicorn](https://www.uvicorn.org/) - The ASGI server
+- [Pydantic](https://pydantic-docs.helpmanual.io/) - The data validation library
+
+We are grateful to the creators and contributors of these tools and libraries for making them open-source and accessible for everyone to use.
