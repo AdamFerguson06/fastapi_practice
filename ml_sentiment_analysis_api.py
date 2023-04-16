@@ -1,15 +1,19 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from transformers import pipeline
 
 app = FastAPI()
-
-sentiment_analysis = pipeline("sentiment-analysis")
 
 class TextData(BaseModel):
     text: str
 
-@app.post("/analyze_sentiment")
-def analyze_sentiment(data: TextData):
-    result = sentiment_analysis(data.text)
-    return result
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, query_param: str = None):
+    return {"item_id": item_id, "query_param": query_param}
+
+@app.post("/process_text")
+def process_text(data: TextData):
+    return {"text": data.text}
